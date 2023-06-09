@@ -4,6 +4,12 @@
     {
       "src": "src/main.ts",
       "use": "@vercel/node",
+      "config": {
+        "prisma": {
+          "beforeBuild": "yarn prisma:generate",
+          "beforeDev": "yarn prisma:generate"
+        }
+      }
     }
   ],
   "routes": [
